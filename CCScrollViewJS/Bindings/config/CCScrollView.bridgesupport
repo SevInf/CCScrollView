@@ -1,0 +1,150 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<enum name='CCScrollViewDirectionBoth' value='2'/>
+<enum name='CCScrollViewDirectionHorizontal' value='0'/>
+<enum name='CCScrollViewDirectionVertical' value='1'/>
+<class name='CCScrollView'>
+<method selector='bounces'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='clipsToBounds'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='container'>
+<retval type='@' declared_type='CCNode*'/>
+</method>
+<method selector='contentOffset'>
+<retval type='{CGPoint=ff}' declared_type='CGPoint'/>
+</method>
+<method selector='delegate'>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='direction'>
+<retval type='i' declared_type='CCScrollViewDirection'/>
+</method>
+<method selector='initWithViewSize:'>
+<arg name='size' index='0' type='{CGSize=ff}' declared_type='CGSize'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='initWithViewSize:container:'>
+<arg name='size' index='0' type='{CGSize=ff}' declared_type='CGSize'/>
+<arg name='container' index='1' type='@' declared_type='CCNode*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='isDragging'>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='isNodeVisible:'>
+<arg name='node' index='0' type='@' declared_type='CCNode*'/>
+<retval type='B' declared_type='BOOL'/>
+</method>
+<method selector='maxContainerOffset'>
+<retval type='{CGPoint=ff}' declared_type='CGPoint'/>
+</method>
+<method selector='maxZoomScale'>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='minContainerOffset'>
+<retval type='{CGPoint=ff}' declared_type='CGPoint'/>
+</method>
+<method selector='minZoomScale'>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+<method selector='pause:'>
+<arg name='sender' index='0' type='@' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='resume:'>
+<arg name='sender' index='0' type='@' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setBounces:'>
+<arg name='bounces' index='0' type='B' declared_type='BOOL'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setClipsToBounds:'>
+<arg name='clipsToBounds' index='0' type='B' declared_type='BOOL'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setContainer:'>
+<arg name='container' index='0' type='@' declared_type='CCNode*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setContentOffset:'>
+<arg name='contentOffset' index='0' type='{CGPoint=ff}' declared_type='CGPoint'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setContentOffset:animated:'>
+<arg name='offset' index='0' type='{CGPoint=ff}' declared_type='CGPoint'/>
+<arg name='animated' index='1' type='B' declared_type='BOOL'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setContentOffset:animatedInDuration:'>
+<arg name='offset' index='0' type='{CGPoint=ff}' declared_type='CGPoint'/>
+<arg name='dt' index='1' type='f' declared_type='ccTime'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setDelegate:'>
+<arg name='delegate' index='0' type='@' declared_type='id'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setDirection:'>
+<arg name='direction' index='0' type='i' declared_type='CCScrollViewDirection'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setMaxZoomScale:'>
+<arg name='maxZoomScale' index='0' type='f' declared_type='CGFloat'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setMinZoomScale:'>
+<arg name='minZoomScale' index='0' type='f' declared_type='CGFloat'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setZoomScale:'>
+<arg name='zoomScale' index='0' type='f' declared_type='CGFloat'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setZoomScale:animated:'>
+<arg name='s' index='0' type='f' declared_type='float'/>
+<arg name='animated' index='1' type='B' declared_type='BOOL'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='setZoomScale:animatedInDuration:'>
+<arg name='s' index='0' type='f' declared_type='float'/>
+<arg name='dt' index='1' type='f' declared_type='ccTime'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method class_method='true' selector='viewWithViewSize:'>
+<arg name='size' index='0' type='{CGSize=ff}' declared_type='CGSize'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method class_method='true' selector='viewWithViewSize:container:'>
+<arg name='size' index='0' type='{CGSize=ff}' declared_type='CGSize'/>
+<arg name='container' index='1' type='@' declared_type='CCNode*'/>
+<retval type='@' declared_type='id'/>
+</method>
+<method selector='zoomScale'>
+<retval type='f' declared_type='CGFloat'/>
+</method>
+</class>
+<class name='NSObject'>
+<method selector='scrollViewDidScroll:'>
+<arg name='view' index='0' type='@' declared_type='CCScrollView*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='scrollViewDidZoom:'>
+<arg name='view' index='0' type='@' declared_type='CCScrollView*'/>
+<retval type='v' declared_type='void'/>
+</method>
+</class>
+<informal_protocol name='CCScrollViewDelegate'>
+<method selector='scrollViewDidScroll:' type='v12@0:4@8'>
+<arg name='view' index='0' type='@' declared_type='CCScrollView*'/>
+<retval type='v' declared_type='void'/>
+</method>
+<method selector='scrollViewDidZoom:' type='v12@0:4@8'>
+<arg name='view' index='0' type='@' declared_type='CCScrollView*'/>
+<retval type='v' declared_type='void'/>
+</method>
+</informal_protocol>
+</signatures>
